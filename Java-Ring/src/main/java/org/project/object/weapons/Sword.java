@@ -4,7 +4,8 @@ import org.project.entity.Entity;
 
 import java.util.ArrayList;
 
-public class Sword extends Weapon
+//TODO: UPDATE IMPLEMENTATION
+public class Sword
 {
     /*
     THIS IS AN EXAMPLE OF A WEAPON DESIGN.
@@ -14,8 +15,7 @@ public class Sword extends Weapon
 
     public Sword ()
     {
-        super (100, 0);
-        abilityCharge = 0;
+        //TODO: DESIGN SWORD'S ATTRIBUTES IMPLEMENT THE CONSTRUCTOR
     }
 
     //TODO: (BONUS) UPDATE THE UNIQUE ABILITY

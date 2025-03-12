@@ -5,7 +5,7 @@ import org.project.object.armors.Armor;
 import org.project.object.weapons.Weapon;
 
 //TODO: UPDATE IMPLEMENTATION
-public abstract class Player implements Entity
+public abstract class Player
 {
     protected String name;
 
@@ -27,6 +27,18 @@ public abstract class Player implements Entity
         this.armor  = armor;
     }
 
+    @Override
+    public void attack (Entity target)
+    {
+        target.takeDamage(weapon.getDamage ());
+    }
+
+    @Override
+    public void defend ()
+    {
+        //TODO: (BONUS) IMPLEMENT A DEFENSE METHOD FOR SHIELDS
+    }
+
     //TODO: (BONUS) UPDATE THE FORMULA OF TAKING DAMAGE
     @Override
     public void takeDamage (int damage)
@@ -43,6 +55,18 @@ public abstract class Player implements Entity
             hp = maxHP;
         }
     }
+
+    @Override
+    public void fillMana (int mana)
+    {
+        mp += mana;
+        if (mp > maxMP)
+        {
+            mp = maxMP;
+        }
+    }
+
+    //region [Getter Functions]
 
     public String getName ()
     {
@@ -80,4 +104,6 @@ public abstract class Player implements Entity
     {
         return armor;
     }
+
+    //endregion
 }

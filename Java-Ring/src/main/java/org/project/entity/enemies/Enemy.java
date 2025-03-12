@@ -6,7 +6,7 @@ import org.project.object.weapons.Weapon;
 import java.util.PrimitiveIterator;
 
 //TODO: UPDATE IMPLEMENTATION
-public abstract class Enemy implements Entity
+public abstract class Enemy
 {
     private int hp;
     private int mp;

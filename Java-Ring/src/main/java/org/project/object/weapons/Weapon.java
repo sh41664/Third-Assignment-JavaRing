@@ -3,7 +3,8 @@ package org.project.object.weapons;
 import org.project.entity.Entity;
 import org.project.object.Object;
 
-public abstract class Weapon implements Object
+//TODO: UPDATE IMPLEMENTATION
+public abstract class Weapon
 {
     private int damage;
     private int manaCost;

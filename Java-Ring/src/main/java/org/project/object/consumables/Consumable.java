@@ -3,7 +3,10 @@ package org.project.object.consumables;
 import org.project.entity.Entity;
 import org.project.object.Object;
 
-public abstract class Consumable implements Object
+//TODO: UPDATE IMPLEMENTATION
+public abstract class Consumable
 {
-    int charges;
+    /*
+    TODO: ADD OTHER REQUIRED AND BONUS METHODS
+    */
 }
