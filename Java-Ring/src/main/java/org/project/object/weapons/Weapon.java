@@ -1,11 +1,9 @@
 package org.project.object.weapons;
 
 import org.project.entity.Entity;
-import org.project.object.Object;
 
-//TODO: UPDATE IMPLEMENTATION
-public abstract class Weapon
-{
+// TODO: UPDATE IMPLEMENTATION
+public abstract class Weapon {
     private int damage;
     private int manaCost;
 
@@ -13,25 +11,21 @@ public abstract class Weapon
     TODO: ADD OTHER REQUIRED AND BONUS ATTRIBUTES
     */
 
-    public Weapon (int damage, int manaCost)
-    {
-        this.damage   = damage;
+    public Weapon(int damage, int manaCost) {
+        this.damage = damage;
         this.manaCost = manaCost;
     }
 
     @Override
-    public void use (Entity target)
-    {
-        target.takeDamage (damage);
+    public void use(Entity target) {
+        target.takeDamage(damage);
     }
 
-    public int getDamage ()
-    {
+    public int getDamage() {
         return damage;
     }
 
-    public int getManaCost ()
-    {
+    public int getManaCost() {
         return manaCost;
     }
 

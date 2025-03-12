@@ -1,20 +1,19 @@
 package org.project.entity;
 
-public interface Entity
-{
-    void attack (Entity target);
+public interface Entity {
+    void attack(Entity target);
 
-    void defend ();
+    void defend();
 
-    void heal (int health);
+    void heal(int health);
 
-    void fillMana (int mana);
+    void fillMana(int mana);
 
-    void takeDamage (int damage);
+    void takeDamage(int damage);
 
-    int getMaxHP ();
+    int getMaxHP();
 
-    int getMaxMP ();
+    int getMaxMP();
 
     /*
     TODO: ADD OTHER REQUIRED AND BONUS METHODS
