@@ -66,8 +66,6 @@ Through this assignment, you will:
   - KnightArmor extends Armor - you can add more subclasses of Armor as a bonus
   - Sword extends Weapon - you can add more subclasses of Weapon as a bonus
 
-- There's a **Location** class which you should use to seed data at the start of the game. Every location has some enemies, a name and optionally some items dropped. You can move among locations and improve the gameplay!
-
 ### 3️⃣ Step 3: Implement Player & Monster Methods 🏹  
 
 Each class should have the appropriate attributes and methods.  
@@ -107,13 +105,16 @@ Goblin has 35 health remaining.
 
 
 
-### 4️⃣ Step 4: Implement the Game Loop 🎮  
+### 4️⃣ Step 4: Implement the Game Loop and Location mechanics 🎮  
 Create a simple **turn-based combat system** in a main game loop:  
 
-1. Players choose a character (Assassin, Knight, or Wizard).  
-2. A random monster (Goblin, Dragon, or Skeleton) is generated.  
-3. The player and the monster take turns attacking each other.
-4. Game ends when either the player or the monster dies.
+1. Players choose a character (Assassin, Knight, or Wizard).
+2. Player enters a location.
+3. A random monster (Goblin, Dragon, or Skeleton) is generated.
+4. Player can choose to fight the monster or move to another location.
+5. In the fight, the player and the monster take turns attacking each other.
+6. If the player defeat the monster, they'll be rewarded and they can proceed.
+7. Game ends when either the player dies.
 
 <br />
 🔹 Example game loop structure:  
@@ -181,9 +182,9 @@ Your assignment will be graded based on the following criteria:
 
 
 ## Tips 🚀 
-💡 **Follow OOP principles**: Avoid redundant code by using inheritance properly.  
-💡 **Test your code**: Run different scenarios to ensure everything works as expected.  
-💡 **Ask for help**: If you're stuck, reach out to your classmates or mentors.  
+- **Follow OOP principles**: Avoid redundant code by using inheritance properly.  
+- **Test your code**: Run different scenarios to ensure everything works as expected.  
+- **Ask for help**: If you're stuck, reach out to your classmates or mentors.  
 
 🎯 Your goal is not just to complete the assignment but to learn and apply OOP effectively!  
 
