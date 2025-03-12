@@ -58,24 +58,26 @@ Through this assignment, you will:
 
 Each class should have the appropriate attributes and methods.  
 
-✅ **Basic Actions:**  
+ **Basic Actions:**  
 - **Attacking**: Players and monsters can attack their opponents.  
 - **Defending**: Reduce or block incoming damage. *(Implementing this action grants extra score!)*  
 - **Being Killed**: When health reaches zero, the entity is defeated.  
 - **Healing**: Players can heal, and some monsters (not all) have the ability to heal.  
 
-✅ **Unique Abilities:**  
-Each class of players and monsters has its own unique abilities:  
+ **Unique Abilities:**  
+- Each class of players and monsters has its own unique abilities:  
 
-### **Players' Unique Abilities**  
-- **Wizard** 🧙‍♂️: Can cast a **special spell** that **heals himself** while also **damaging the enemy**.  
-- **Assassin** 🗡️: Can become **invisible**, making him **immune to enemy attacks** while dealing **increased damage** when attacking in this state.  
-- **Knight** ⚔️: Can perform a **strong kick** that deals **extra damage** but can only be used **after a certain number of rounds** (cannot use it every turn).  
+  - **Players' Unique Abilities**
+      
+    - **Wizard** 🧙‍♂️: Can cast a **special spell** that **heals himself** while also **damaging the enemy**.  
+    - **Assassin** 🗡️: Can become **invisible**, making him **immune to enemy attacks** while dealing **increased damage** when attacking in this state.  
+    - **Knight** ⚔️: Can perform a **strong kick** that deals **extra damage** but can only be used **after a certain number of rounds** (cannot use it every turn).  
 
-### **Monsters' Unique Abilities**  
-- **Goblin** 👹: Has no unique abilities.  
-- **Dragon** 🐉: Can **bypass shields**; damaging players even if they are defending. If there are **multiple players in the game** (extra score scenario), the dragon’s ability **damages all players simultaneously**.  
-- **Skeleton** ☠️: Can **resurrect once** after being defeated, returning to battle with a portion of its health restored.  
+  - **Monsters' Unique Abilities**
+    
+    - **Goblin** 👹: Has no unique abilities.  
+    - **Dragon** 🐉: Can **bypass shields**; damaging players even if they are defending. If there are **multiple players in the game** (extra score scenario), the dragon’s ability **damages all players simultaneously**.  
+    - **Skeleton** ☠️: Can **resurrect once** after being defeated, returning to battle with a portion of its health restored.  
 
 <br />
 
