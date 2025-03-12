@@ -6,9 +6,6 @@ Welcome to **Java-Ring**, a turn-based RPG inspired by Souls-like games! In this
 
 Your task is to implement a class hierarchy for different game entities, including **players and monsters**, each with unique abilities and attributes. By the end of this project, you will have a *functional game system* where players can **fight monsters in a turn-based combat system**, reinforcing your understanding of *OOP design* in a practical way.
 
-### **Game Concept**  
-Java-Ring is a turn-based game where players take on the role of powerful warriors, each wielding unique weapons, and face off against fearsome monsters in combat. Both players and monsters have their own **health, attack power, and special abilities**. The game progresses through **turn-based battles**, where each entity (player or monster) attacks in sequence until one is defeated.
-
 ### **What is a Turn-Based Game?**  
 In this combat system, two sides - which are usually the player's side and the enemy's side - attack each other in turns. The side which is not attacking can perform actions to avoid or deflect the enemy's attack.
 
