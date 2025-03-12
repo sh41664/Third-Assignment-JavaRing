@@ -62,9 +62,9 @@ Through this assignment, you will:
   - There are 3 classes: Wizard, Knight and Assassin which extend Player (or more if you want)
   - There are 3 classes: Skeleton, Goblin and Dragon which extend Enemy (or more if you want)
   - Consumable, Armor & Weapon are abstract classes that implement Object
-  - Flask extends Consumable - you can add more subclasses of Consumable as a bonus
-  - KnightArmor extends Armor - you can add more subclasses of Armor as a bonus
-  - Sword extends Weapon - you can add more subclasses of Weapon as a bonus
+  - Flask extends Consumable - you can add more subclasses of Consumable for extra score
+  - KnightArmor extends Armor - you can add more subclasses of Armor for extra score
+  - Sword extends Weapon - you can add more subclasses of Weapon for extra score
 
 ### 3️⃣ Step 3: Implement Player & Monster Methods 🏹  
 
