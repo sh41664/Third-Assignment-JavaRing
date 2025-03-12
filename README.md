@@ -1,5 +1,5 @@
 # Third Assignment: Java-Ring 🎮  
-A turned-based RPG inspired by Souls-like games which can be run in terminal
+A turn-based RPG inspired by Souls-like games which can be run in terminal
 
 ### **Introduction**  
 Welcome to **Java-Ring**, a turn-based RPG inspired by Souls-like games! In this assignment, you will develop a **text-based role-playing game (RPG)** that follows a structured combat system where players engage in battles against powerful monsters. This project is designed to reinforce your understanding of **Object-Oriented Programming (OOP) principles**, including *inheritance, polymorphism, and interfaces*.  
