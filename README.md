@@ -109,7 +109,7 @@ Goblin has 35 health remaining.
 Create a simple **turn-based combat system** in a main game loop:  
 
 1. Players choose a character (Assassin, Knight, or Wizard).
-2. Player enters a location.
+2. The player enters the starting location.
 3. A random monster (Goblin, Dragon, or Skeleton) is generated.
 4. Player can choose to fight the monster or move to another location.
 5. In the fight, the player and the monster take turns attacking each other.
