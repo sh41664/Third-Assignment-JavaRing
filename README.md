@@ -20,15 +20,6 @@ In this combat system, two sides - which are usually the player's side and the e
 - **Damage system** – Each weapon deals a specific amount of damage, reducing the opponent’s health.  
 - **Battle to the death** – The combat continues until one side is completely defeated.  
 
-### **How the Game Works**  
-1️⃣ The player selects a character class.  
-2️⃣ A random monster opponent is generated.  
-3️⃣ Both entities **take turns attacking** each other.  
-4️⃣ The battle ends when one entity’s health reaches **zero**.  
-5️⃣ (Optional) Players can switch weapons during combat if multiple weapons are implemented.  
-
-
-
 ## Objectives ✏️  
 Through this assignment, you will:  
 - Learn and apply *inheritance* to structure a game class hierarchy.  
