@@ -13,7 +13,7 @@ In this combat system, two sides - which are usually the player's side and the e
 - **Turn-based combat** – Players and monsters take turns attacking each other.  
 - **Weapons system** – Each player and monster **must** have at least one weapon. (For extra points, students can implement multiple weapons per entity.)  
 - **Character classes** – Players can choose from different warrior archetypes, such as **Knight, Assassin, or Wizard**, each with unique abilities.  
-- **Monsters with special attacks** – Monsters like **Dragons, Goblins, and Skeletons** have distinct attack patterns.  
+- **Monsters classes** – Monsters like **Dragons, Goblins, and Skeletons** which have distinct attack patterns.  
 - **Damage system** – Each weapon deals a specific amount of damage, reducing the opponent’s health.  
 - **Battle to the death** – The combat continues until one side is completely defeated.  
 
