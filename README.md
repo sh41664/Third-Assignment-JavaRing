@@ -66,6 +66,8 @@ Through this assignment, you will:
   - KnightArmor extends Armor - you can add more subclasses of Armor as a bonus
   - Sword extends Weapon - you can add more subclasses of Weapon as a bonus
 
+- There's a **Location** class which you should use to seed data at the start of the game. Every location has some enemies, a name and optionally some items dropped. You can move among locations and improve the gameplay!
+
 ### 3️⃣ Step 3: Implement Player & Monster Methods 🏹  
 
 Each class should have the appropriate attributes and methods.  
