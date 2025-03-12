@@ -50,8 +50,8 @@ Through this assignment, you will:
 - You must implement the class hierarchy as shown in the diagram below:  
 
 <div align="center">
-  <img src="entities.png" width="100%">
-  <img src="objects.png" width="100%">
+  <img src="https://github.com/user-attachments/assets/e71cab82-5745-4898-8eb1-a5da0bf94a0a" width="100%">
+  <img src="https://github.com/user-attachments/assets/6849d23e-3021-458b-94a7-a32f6d98e63e" width="100%">
 </div>
 <br />
 
@@ -89,7 +89,8 @@ Each class of players and monsters has its own unique abilities:
 - **Dragon** 🐉: Can **bypass shields**, damaging players even if they are defending. If there are **multiple players in the game** (extra score scenario), the dragon’s ability **damages all players simultaneously**.  
 - **Skeleton** ☠️: Can **resurrect once** after being defeated, returning to battle with a portion of its health restored.  
 
-<br />  
+<br />
+
 🔹 Make sure each entity **prints messages** when performing actions:  
 
 ```bash
