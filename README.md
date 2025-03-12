@@ -1,4 +1,4 @@
-# **Java-Ring** 🎮  
+# Third Assignment: Java-Ring 🎮  
 A turned-based RPG inspired by Souls-like games which can be run in terminal
 
 ### **Introduction**  
@@ -29,16 +29,16 @@ In this combat system, two sides - which are usually the player's side and the e
 
 
 
-## 📌 Learning Objectives  
+## Objectives ✏️  
 Through this assignment, you will:  
-✅ Learn and apply *inheritance* to structure a game class hierarchy.  
-✅ Understand and implement *interfaces* and *abstract classes*.  
-✅ Use *polymorphism* to handle interactions between game entities.  
-✅ Practice *code reusability* and *modularity* in Java.  
-✅ Develop a *terminal-based game* that showcases OOP concepts.  
-✅ Develop a creative gameplay to make it a playable simple game.
+- Learn and apply *inheritance* to structure a game class hierarchy.  
+- Understand and implement *interfaces* and *abstract classes*.  
+- Use *polymorphism* to handle interactions between game entities.  
+- Practice *code reusability* and *modularity* in Java.  
+- Develop a *terminal-based game* that showcases OOP concepts.  
+- Develop a creative gameplay to make it a playable simple game.
 
-## 📝 Assignment Tasks  
+## Tasks 📝
 
 ### 1️⃣ Step 1: Fork & Setup 🍴  
 1. **Fork** this repository and clone it to your local machine.  
@@ -59,12 +59,12 @@ Through this assignment, you will:
 
   - We have Entity, Object & Location in game
   - Player & Enemy are abstract classes that implement Entity
-  - There are 3 classes Wizard, Knight and Assassin which extend Player (or more if you want)
-  - There are 3 classes Skeleton, Goblin and Dragon which extend Enemy (or more if you want)
+  - There are 3 classes: Wizard, Knight and Assassin which extend Player (or more if you want)
+  - There are 3 classes: Skeleton, Goblin and Dragon which extend Enemy (or more if you want)
   - Consumable, Armor & Weapon are abstract classes that implement Object
-  - Flask extends Consumable - you can add more subclasses of Consumable for extra
-  - KnightArmor extends Armor - you can add more subclasses of Armor for extra
-  - Sword extends Weapon - you can add more subclasses of Weapon for extra
+  - Flask extends Consumable - you can add more subclasses of Consumable as a bonus
+  - KnightArmor extends Armor - you can add more subclasses of Armor as a bonus
+  - Sword extends Weapon - you can add more subclasses of Weapon as a bonus
 
 ### 3️⃣ Step 3: Implement Player & Monster Methods 🏹  
 
@@ -72,7 +72,7 @@ Each class should have the appropriate attributes and methods.
 
 ✅ **Basic Actions:**  
 - **Attacking**: Players and monsters can attack their opponents.  
-- **Defending** 🛡️: Reduce or block incoming damage. *(Implementing this action grants extra score!)*  
+- **Defending**: Reduce or block incoming damage. *(Implementing this action grants extra score!)*  
 - **Being Killed**: When health reaches zero, the entity is defeated.  
 - **Healing**: Players can heal, and some monsters (not all) have the ability to heal.  
 
@@ -86,7 +86,7 @@ Each class of players and monsters has its own unique abilities:
 
 ### **Monsters' Unique Abilities**  
 - **Goblin** 👹: Has no unique abilities.  
-- **Dragon** 🐉: Can **bypass shields**, damaging players even if they are defending. If there are **multiple players in the game** (extra score scenario), the dragon’s ability **damages all players simultaneously**.  
+- **Dragon** 🐉: Can **bypass shields**; damaging players even if they are defending. If there are **multiple players in the game** (extra score scenario), the dragon’s ability **damages all players simultaneously**.  
 - **Skeleton** ☠️: Can **resurrect once** after being defeated, returning to battle with a portion of its health restored.  
 
 <br />
@@ -94,7 +94,7 @@ Each class of players and monsters has its own unique abilities:
 🔹 Make sure each entity **prints messages** when performing actions:  
 
 ```bash
-Arthur attack Goblin
+Arthur attacked Goblin
 ```
 
 ```bash
@@ -154,7 +154,7 @@ Want to **earn extra points**? Try implementing one of these:
 By implementing any of these extra features, you can earn additional points to boost your final score! 🚀  
 
 
-## 🔍 Grading Criteria 🏆  
+## Evaluation Criteria ⚖
 Your assignment will be graded based on the following criteria:  
 
 | **Criteria**           | **Points**  |
@@ -168,9 +168,9 @@ Your assignment will be graded based on the following criteria:
 | **Total Score** | **110** |
 
 
-## 💡 Submission Guidelines  
-✅ **Deadline**: Submit your assignment before **March 19th, 2025**.  
-✅ **Submission Format**:  
+## Submission ⌛
+- **Deadline**: Submit your assignment before **March 19th, 2025**.  
+- **Submission Format**:  
 1. Push your code to **your forked repository**.  
 2. Create a **pull request** to the main branch.  
 3. Include a **README.md** with explanations of your implementation.  
@@ -178,7 +178,7 @@ Your assignment will be graded based on the following criteria:
 📌 **Note:** Late submissions may receive **deductions**!  
 
 
-## 🚀 Tips for Success  
+## Tips 🚀 
 💡 **Follow OOP principles**: Avoid redundant code by using inheritance properly.  
 💡 **Test your code**: Run different scenarios to ensure everything works as expected.  
 💡 **Ask for help**: If you're stuck, reach out to your classmates or mentors.  
