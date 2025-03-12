@@ -13,12 +13,12 @@ Java-Ring is a turn-based game where players take on the role of powerful warrio
 In this combat system, two sides - which are usually the player's side and the enemy's side - attack each other in turns. The side which is not attacking can perform actions to avoid or deflect the enemy's attack.
 
 ### **Core Mechanics:**  
-✅ **Turn-based combat** – Players and monsters take turns attacking each other.  
-✅ **Weapons system** – Each player and monster **must** have at least one weapon. (For extra points, students can implement multiple weapons per entity.)  
-✅ **Character classes** – Players can choose from different warrior archetypes, such as **Knight, Assassin, or Wizard**, each with unique abilities.  
-✅ **Monsters with special attacks** – Monsters like **Dragons, Goblins, and Skeletons** have distinct attack patterns.  
-✅ **Damage system** – Each weapon deals a specific amount of damage, reducing the opponent’s health.  
-✅ **Battle to the death** – The combat continues until one side is completely defeated.  
+- **Turn-based combat** – Players and monsters take turns attacking each other.  
+- **Weapons system** – Each player and monster **must** have at least one weapon. (For extra points, students can implement multiple weapons per entity.)  
+- **Character classes** – Players can choose from different warrior archetypes, such as **Knight, Assassin, or Wizard**, each with unique abilities.  
+- **Monsters with special attacks** – Monsters like **Dragons, Goblins, and Skeletons** have distinct attack patterns.  
+- **Damage system** – Each weapon deals a specific amount of damage, reducing the opponent’s health.  
+- **Battle to the death** – The combat continues until one side is completely defeated.  
 
 ### **How the Game Works**  
 1️⃣ The player selects a character class.  
@@ -31,11 +31,11 @@ In this combat system, two sides - which are usually the player's side and the e
 
 ## 📌 Learning Objectives  
 Through this assignment, you will:  
-✅ Learn and apply **inheritance** to structure a game class hierarchy.  
-✅ Understand and implement **interfaces** and **abstract classes**.  
-✅ Use **polymorphism** to handle interactions between game entities.  
-✅ Practice **code reusability** and **modularity** in Java.  
-✅ Develop a **terminal-based game** that showcases OOP concepts.  
+✅ Learn and apply *inheritance* to structure a game class hierarchy.  
+✅ Understand and implement *interfaces* and *abstract classes*.  
+✅ Use *polymorphism* to handle interactions between game entities.  
+✅ Practice *code reusability* and *modularity* in Java.  
+✅ Develop a *terminal-based game* that showcases OOP concepts.  
 ✅ Develop a creative gameplay to make it a playable simple game.
 
 ## 📝 Assignment Tasks  
@@ -49,11 +49,22 @@ Through this assignment, you will:
 
 - You must implement the class hierarchy as shown in the diagram below:  
 
-![Class Hierarchy](resources/image.png)  
+<div align="center">
+  <img src="entities.png" width="100%">
+  <img src="objects.png" width="100%">
+</div>
+<br />
 
 - Class Descriptions:  
 
-<!-- todo -->
+  - We have Entity, Object & Location in game
+  - Player & Enemy are abstract classes that implement Entity
+  - There are 3 classes Wizard, Knight and Assassin which extend Player (or more if you want)
+  - There are 3 classes Skeleton, Goblin and Dragon which extend Enemy (or more if you want)
+  - Consumable, Armor & Weapon are abstract classes that implement Object
+  - Flask extends Consumable - you can add more subclasses of Consumable for extra
+  - KnightArmor extends Armor - you can add more subclasses of Armor for extra
+  - Sword extends Weapon - you can add more subclasses of Weapon for extra
 
 ### 3️⃣ Step 3: Implement Player & Monster Methods 🏹  
 
@@ -74,12 +85,16 @@ Each class of players and monsters has its own unique abilities:
 - **Knight** ⚔️: Can perform a **strong kick** that deals **extra damage** but can only be used **after a certain number of rounds** (cannot use it every turn).  
 
 ### **Monsters' Unique Abilities**  
-- **Goblin** 👹: *[Unique ability to be determined]*  
+- **Goblin** 👹: Has no unique abilities.  
 - **Dragon** 🐉: Can **bypass shields**, damaging players even if they are defending. If there are **multiple players in the game** (extra score scenario), the dragon’s ability **damages all players simultaneously**.  
 - **Skeleton** ☠️: Can **resurrect once** after being defeated, returning to battle with a portion of its health restored.  
 
 <br />  
 🔹 Make sure each entity **prints messages** when performing actions:  
+
+```bash
+Arthur attack Goblin
+```
 
 ```bash
 Arthur (Knight) attacked Goblin!
@@ -100,13 +115,14 @@ Create a simple **turn-based combat system** in a main game loop:
 <br />
 🔹 Example game loop structure:  
 
-java
+```java
 while (player.isAlive() && enemy.isAlive()) {
     player.attack(enemy);
     if (enemy.isAlive()) {
         enemy.attack(player);
     }
 }
+```
 
 
 
@@ -143,12 +159,12 @@ Your assignment will be graded based on the following criteria:
 | **Criteria**           | **Points**  |
 |------------------------|------------|
 | Correct class hierarchy implementation | **30** |
-| Proper use of OOP principles (inheritance, interfaces) | **20** |
+| Proper use of OOP principles (inheritance, interfaces) | **30** |
 | Working combat system with player & monster interactions | **20** |
 | Meaningful console outputs for actions | **10** |
 | Code readability, documentation, and comments | **10** |
 | Extra features (bonus tasks) | **10** |
-| **Total Score** | **100** |
+| **Total Score** | **110** |
 
 
 ## 💡 Submission Guidelines  
