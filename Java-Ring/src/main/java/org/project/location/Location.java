@@ -7,7 +7,6 @@ import java.util.ArrayList;
 public class Location {
     private String name;
 
-    private ArrayList<Location> locations;
     private ArrayList<Enemy> enemies;
 
     public Location(ArrayList<Location> locations, ArrayList<Enemy> enemies) {
