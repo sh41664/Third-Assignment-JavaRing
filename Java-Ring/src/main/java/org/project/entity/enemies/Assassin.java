@@ -1,20 +1,27 @@
 package org.project.entity.players;
 
+
 import org.project.entity.Entity;
+import org.project.entity.players.Player;
 import org.project.object.armors.Armor;
+import org.project.object.weapons.Sword;
 import org.project.object.weapons.Weapon;
 
-// TODO: UPDATE IMPLEMENTATION
-public abstract class Player implements Entity {
-    protected String name;
-    Weapon weapon;
-    Armor armor;
+import java.util.Random;
+
+public class Assassin extends Player {
+    private String name;
     private int hp;
     private int maxHP;
     private int mp;
     private int maxMP;
+    private Weapon weapon;
+    private Armor armor;
+    private boolean isInvisible;
+    private Random random;
 
-    public Player(String name, int hp, int maxHP, int mp, int maxMP, Weapon weapon, Armor armor) {
+    public Assassin(String name, int hp, int maxHP, int mp, int maxMP, Weapon weapon, Armor armor) {
+        super(name, hp, maxHP, mp, maxMP, weapon, armor);
         this.name = name;
         this.hp = hp;
         this.maxHP = maxHP;
@@ -22,30 +29,46 @@ public abstract class Player implements Entity {
         this.maxMP = maxMP;
         this.weapon = weapon;
         this.armor = armor;
+        this.isInvisible = false;
+        this.random = new Random();
+    }
+
+    public Assassin() {
+        this("Assassin", 70, 70, 70, 70, new Sword(), null);
     }
 
     @Override
     public void attack(Entity target) {
         System.out.println(name + " attacked " + target.getClass().getSimpleName() + " with " + weapon.getName());
-        weapon.use(target);
+        int damage = weapon.getDamage();
+        if (isInvisible) {
+            damage *= 1.5; // Increased damage when invisible
+            System.out.println(name + " strikes from the shadows, dealing extra damage!");
+            isInvisible = false; // Invisibility ends after attack
+        }
+        target.takeDamage(damage);
     }
 
     @Override
     public void defend() {
-        System.out.println(name + " is defending.");
-        // TODO: (BONUS) IMPLEMENT A DEFENSE METHOD FOR SHIELDS
+        System.out.println(name + " is focusing on evasion!");
     }
 
-    // TODO: (BONUS) UPDATE THE FORMULA OF TAKING DAMAGE
     @Override
     public void takeDamage(int damage) {
+        if (isInvisible) {
+            System.out.println(name + " dodged the attack due to invisibility!");
+            isInvisible = false; // Invisibility breaks upon dodging
+            return; // No damage taken
+        }
+
         int damageAfterArmor = damage;
         if (armor != null) {
             damageAfterArmor -= armor.getDefense();
             if (damageAfterArmor < 0) {
                 damageAfterArmor = 0;
             }
-            armor.takeDamage(damage); // Armor takes damage
+            armor.takeDamage(damage);
         }
 
         hp -= damageAfterArmor;
@@ -64,6 +87,7 @@ public abstract class Player implements Entity {
         System.out.println(name + " healed for " + health + " HP. Current HP: " + hp);
     }
 
+    @Override
     public void fillMana(int mana) {
         mp += mana;
         if (mp > maxMP) {
@@ -72,11 +96,23 @@ public abstract class Player implements Entity {
         System.out.println(name + " filled " + mana + " MP. Current MP: " + mp);
     }
 
-
-    public abstract void useUniqueAbility(Entity target);
+    @Override
+    public void useUniqueAbility(Entity target) {
+        if (!isInvisible) {
+            isInvisible = true;
+            System.out.println(name + " became invisible!");
+        } else {
+            System.out.println(name + " is already invisible!");
+        }
+    }
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public Object getHealth() {
+        return null;
     }
 
     public int getHp() {
