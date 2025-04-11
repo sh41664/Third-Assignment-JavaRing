@@ -3,30 +3,48 @@ package org.project.location;
 import org.project.entity.enemies.Enemy;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Location {
     private String name;
+    private String description;
+    private List<Enemy> enemies;
 
-    private ArrayList<Enemy> enemies;
-
-    public Location(ArrayList<Location> locations, ArrayList<Enemy> enemies) {
-        this.locations = locations;
-        this.enemies = enemies;
+    public Location(String name, String description) {
+        this.name = name;
+        this.description = description;
+        this.enemies = new ArrayList<>();
     }
 
-    /*
-    TODO: (BONUS) RESET EACH LOCATION AFTER PLAYER LEAVES
-    */
+    public Location(String name, String description, List<Enemy> enemies) {
+        this.name = name;
+        this.description = description;
+        this.enemies = enemies;
+    }
 
     public String getName() {
         return name;
     }
 
-    public ArrayList<Location> getLocations() {
-        return locations;
+    public String getDescription() {
+        return description;
     }
 
-    public ArrayList<Enemy> getEnemies() {
+    public List<Enemy> getEnemies() {
         return enemies;
+    }
+
+    public void addEnemy(Enemy enemy) {
+        this.enemies.add(enemy);
+    }
+
+    public void removeEnemy(Enemy enemy) {
+        this.enemies.remove(enemy);
+    }
+
+    // BONUS: RESET EACH LOCATION AFTER PLAYER LEAVES
+    public void resetLocation() {
+        this.enemies.clear(); // Clear all enemies in the location
+        System.out.println("Location " + name + " has been reset.");
     }
 }

@@ -2,23 +2,28 @@ package org.project.object.weapons;
 
 import org.project.entity.Entity;
 
-// TODO: UPDATE IMPLEMENTATION
 public abstract class Weapon {
+    private String name;
     private int damage;
     private int manaCost;
+    private int durability; // Added durability
 
-    /*
-    TODO: ADD OTHER REQUIRED AND BONUS ATTRIBUTES
-    */
-
-    public Weapon(int damage, int manaCost) {
+    public Weapon(String name, int damage, int manaCost, int durability) {
+        this.name = name;
         this.damage = damage;
         this.manaCost = manaCost;
+        this.durability = durability;
     }
 
-    @Override
     public void use(Entity target) {
-        target.takeDamage(damage);
+        if (durability > 0) {
+            System.out.println("Used " + name + " to attack!");
+            target.takeDamage(damage);
+            durability--; // Reduce durability each use
+            System.out.println(name + " durability: " + durability);
+        } else {
+            System.out.println(name + " is broken and cannot be used!");
+        }
     }
 
     public int getDamage() {
@@ -29,7 +34,15 @@ public abstract class Weapon {
         return manaCost;
     }
 
-    /*
-    TODO: ADD OTHER REQUIRED AND BONUS METHODS
-    */
+    public String getName() {
+        return name;
+    }
+
+    public int getDurability() {
+        return durability;
+    }
+
+    public void setDurability(int durability) {
+        this.durability = durability;
+    }
 }

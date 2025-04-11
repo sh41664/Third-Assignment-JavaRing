@@ -1,38 +1,48 @@
 package org.project.entity.enemies;
 
 import org.project.entity.Entity;
+import org.project.entity.players.Player;
+import org.project.object.weapons.Sword;
 import org.project.object.weapons.Weapon;
 
-// TODO: UPDATE IMPLEMENTATION
-public abstract class Enemy implements Entity {
-    protected String name;
-    Weapon weapon;
+import java.util.ArrayList;
+import java.util.Random;
+
+public class Dragon extends Enemy {
+    private String name;
     private int hp;
     private int maxHP;
     private int mp;
     private int maxMP;
+    private Weapon weapon;
+    private Random random;
 
-    public Enemy(String name, int hp, int maxHP, int mp, int maxMP, Weapon weapon) {
+    public Dragon(String name, int hp, int maxHP, int mp, int maxMP, Weapon weapon) {
+        super(name, hp, maxHP, mp, maxMP, weapon);
         this.name = name;
         this.hp = hp;
         this.maxHP = maxHP;
         this.mp = mp;
         this.maxMP = maxMP;
         this.weapon = weapon;
+        this.random = new Random();
+    }
+
+    public Dragon() {
+        this("Dragon", 150, 150, 50, 50, new Sword());
     }
 
     @Override
     public void attack(Entity target) {
-        System.out.println(name + " attacked " + target.getClass().getSimpleName() + " with " + weapon.getName());
+        System.out.println(name + " breathes fire at " + target.getClass().getSimpleName() + " with " + weapon.getName());
         target.takeDamage(weapon.getDamage());
     }
 
     @Override
     public void defend() {
-        System.out.println(name + " is defending.");
+        System.out.println(name + " is scaling its armor!");
     }
 
-    // TODO: (BONUS) UPDATE THE FORMULA OF TAKING DAMAGE
     @Override
     public void takeDamage(int damage) {
         hp -= damage;
@@ -44,11 +54,7 @@ public abstract class Enemy implements Entity {
 
     @Override
     public void heal(int health) {
-        hp += health;
-        if (hp > maxHP) {
-            hp = maxHP;
-        }
-        System.out.println(name + " healed for " + health + " HP. Current HP: " + hp);
+        System.out.println(name + " cannot be healed!");
     }
 
     @Override
@@ -60,10 +66,22 @@ public abstract class Enemy implements Entity {
         System.out.println(name + " filled " + mana + " MP. Current MP: " + mp);
     }
 
-    public abstract void useUniqueAbility(Entity target);
+    @Override
+    public void useUniqueAbility(Entity target) {
+        System.out.println(name + " uses Dragon Breath!");
+        if (target instanceof Player) {
+            System.out.println(name + " bypasses the shield");
+            target.takeDamage(weapon.getDamage());
+        }
+    }
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public Object getHealth() {
+        return null;
     }
 
     public int getHp() {

@@ -15,6 +15,11 @@ public interface Entity {
 
     int getMaxMP();
 
+    boolean isAlive();
+
+    String getName();
+
+    Object getHealth();
     /*
     TODO: ADD OTHER REQUIRED AND BONUS METHODS
     */
